@@ -23,7 +23,7 @@ export function Home(props: any) {
   return (
     <div className="container">
       Home
-      <button  onClick={goToHome2}>asass</button>
+      <button  onClick={goToHome2}>{process.env.REACT_APP_NAME}</button>
       <button  onClick={() => dispatch(decrement())}>dec</button>
       <button  onClick={() => dispatch(incrementAsync(10))}>increment</button>
       <div>
