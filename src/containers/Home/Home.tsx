@@ -5,7 +5,7 @@ import {
   incrementAsync,
   selectCount,
   selectStatus,
-} from '../../redux/modules/counter.module';
+} from '../../redux/modules/counter/counter.module';
 
 import './Home.scss'
 

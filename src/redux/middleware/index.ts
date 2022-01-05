@@ -6,7 +6,9 @@
 // Top-Level Middlewares
 import { fsaErrorLogger } from './errors.middleware';
 
-export default [
+const middlewares = [
   // TOP-LEVEL
   fsaErrorLogger,
 ];
+
+export default middlewares;

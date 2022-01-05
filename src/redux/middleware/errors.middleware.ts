@@ -1,4 +1,4 @@
-export const fsaErrorLogger = () => (next) => (action) => {
+export const fsaErrorLogger = () => (next: any) => (action: any) => {
   // for all actions received that comply with the FSA spec,
   // just push the error to console
   if (action.error === true) {
