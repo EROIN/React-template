@@ -4,7 +4,7 @@
 */
 
 // Top-Level Middlewares
-import { fsaErrorLogger } from './errors.middleware';
+import {fsaErrorLogger} from './errors.middleware';
 
 const middlewares = [
   // TOP-LEVEL

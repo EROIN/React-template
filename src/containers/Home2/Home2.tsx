@@ -1,7 +1,3 @@
 export function Home2() {
-  return (
-    <div className="App">
-      Home2
-    </div>
-  );
+  return <div className="App">Home2</div>;
 }

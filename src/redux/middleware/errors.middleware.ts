@@ -3,7 +3,9 @@ export const fsaErrorLogger = () => (next: any) => (action: any) => {
   // just push the error to console
   if (action.error === true) {
     try {
-      console.log(`Promise-generating redux action ${action.type} threw an error: ${action.payload}`); // eslint-disable-line no-console
+      console.log(
+        `Promise-generating redux action ${action.type} threw an error: ${action.payload}`,
+      ); // eslint-disable-line no-console
     } catch (error) {
       return next(action);
     }

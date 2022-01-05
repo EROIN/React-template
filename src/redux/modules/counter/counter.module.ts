@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 import {incrementAsync} from './counter.actions';
 
@@ -12,10 +12,10 @@ export const counterSlice = createSlice({
   initialState,
 
   reducers: {
-    increment: (state) => {
+    increment: state => {
       state.value += 1;
     },
-    decrement: (state) => {
+    decrement: state => {
       state.value -= 1;
     },
 
@@ -24,12 +24,12 @@ export const counterSlice = createSlice({
     },
   },
 
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(incrementAsync.pending, (state) => {
+      .addCase(incrementAsync.pending, state => {
         state.status = 'loading';
       })
-      .addCase(incrementAsync.rejected, (state) => {
+      .addCase(incrementAsync.rejected, state => {
         state.status = 'failed';
       })
       .addCase(incrementAsync.fulfilled, (state, action) => {
@@ -39,7 +39,7 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const {increment, decrement, incrementByAmount} = counterSlice.actions;
 export default counterSlice.reducer;
 export * from './counter.actions';
 export * from './counter.selectors';

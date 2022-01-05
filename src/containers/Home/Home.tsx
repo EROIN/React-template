@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {
   decrement,
@@ -7,7 +7,7 @@ import {
   selectStatus,
 } from '../../redux/modules/counter/counter.module';
 
-import './Home.scss'
+import './Home.scss';
 
 export function Home(props: any) {
   const count = useSelector(selectCount);
@@ -17,15 +17,17 @@ export function Home(props: any) {
 
   const goToHome2 = () => {
     const {history} = props;
-    history.push('/Home2')
-  }
+    history.push('/Home2');
+  };
 
   return (
     <div className="container">
       Home
-      <button  onClick={goToHome2}>{process.env.REACT_APP_NAME}</button>
-      <button  onClick={() => dispatch(decrement())}>dec</button>
-      <button  onClick={() => dispatch(incrementAsync(10))}>increment</button>
+      <button onClick={goToHome2}>
+        hashashask{process.env.REACT_APP_NAME}
+      </button>
+      <button onClick={() => dispatch(decrement())}>dec</button>
+      <button onClick={() => dispatch(incrementAsync(10))}>increment</button>
       <div>
         {count}
         {status}
