@@ -4,10 +4,12 @@ import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from "redux-thunk"
 
+import counterReducer from '../redux/modules/counter.module';
 export const history = createBrowserHistory()
 
 const createRootReducer = (history) => combineReducers({
   router: connectRouter(history),
+  counter: counterReducer
 })
 
 export const store = function configureStore(preloadedState) {

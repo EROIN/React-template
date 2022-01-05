@@ -14,8 +14,8 @@ function App() {
       <ConnectedRouter history={history}>
         <>
           <Switch>
-            <Route exact path="/" render={Home} />
-            <Route exact path="/Home2" render={Home2} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Home2" component={Home2} />
             <Route exact path="/test" render={() => (<><h1>test</h1></>)} />
             <Route render={() => (<div>Miss</div>)} />
           </Switch>
