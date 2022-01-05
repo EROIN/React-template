@@ -9,7 +9,7 @@ import {
 
 import './Home.scss'
 
-export function Home(props) {
+export function Home(props: any) {
   const count = useSelector(selectCount);
   const status = useSelector(selectStatus);
   const dispatch = useDispatch();
