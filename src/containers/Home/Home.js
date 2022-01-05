@@ -2,13 +2,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import {
   decrement,
-  increment,
-  incrementByAmount,
   incrementAsync,
-  incrementIfOdd,
   selectCount,
   selectStatus,
 } from '../../redux/modules/counter.module';
+
+import './Home.scss'
 
 export function Home(props) {
   const count = useSelector(selectCount);
@@ -22,7 +21,7 @@ export function Home(props) {
   }
 
   return (
-    <div className="App">
+    <div className="container">
       Home
       <button  onClick={goToHome2}>asass</button>
       <button  onClick={() => dispatch(decrement())}>dec</button>
