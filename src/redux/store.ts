@@ -15,7 +15,11 @@ const createRootReducer = (history: any) => combineReducers({
 export const store = function configureStore(preloadedState?: any) {
   const store = createStore(
     createRootReducer(history),
-    preloadedState, compose(applyMiddleware(routerMiddleware(history), thunk)),
+    preloadedState,
+    compose(
+      applyMiddleware(routerMiddleware(history), thunk),
+            (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+    ),
   )
   return store
 }
