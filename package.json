@@ -44,7 +44,8 @@
     "lint:fix": "eslint ./src --fix --ext .js,.jsx,.ts,.tsx",
     "prettier:check": "prettier --check ./src",
     "prettier:format": "prettier --write ./src",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -66,7 +67,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check-types && npm run lint && prettier:check && npm run test && npm run build"
+      "pre-push": "npm run check-types && npm run lint && prettier:check && npm run test && npm run build"
     }
   }
 }
